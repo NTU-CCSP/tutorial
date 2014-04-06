@@ -1,3 +1,65 @@
+Scenario
+---------
+
+<p class="fragment">正妹/型男好友牆</p>
+<p class="fragment">秀出你所有的異性/同性好友</p>
+<p class="fragment">每個人的大頭貼顯示為最高讚數的一張。</p>
+
+---
+
+
+
+Graph API / FQL
+---------
+
+[Graph API Reference](https://developers.facebook.com/docs/reference/api/)
+
+能讀取或發佈各種資源；每項資源裡有 fields（欄位）和 edges（巢狀資源）。
+
+- - -
+
+[FQL](https://developers.facebook.com/docs/reference/fql/)
+
+將 Graph API 裡的「物件」當成資料庫的「資料表」來操作，可以拿到比較多資源、下比較複雜的指令。
+
+---
+
+
+
+Divide into Subtasks
+---------
+
+<ul>
+  <li class="fragment">拿到一個人的所有朋友（必須包含性別資訊）</li>
+  <li class="fragment">過濾我們想要的性別</li>
+  <li class="fragment">拿每個朋友的相簿列表，找出Profile Pictures</li>
+  <li class="fragment">針對每個人的Profile Pictures，找出最高讚數的相片</li>
+</ul>
+
+---
+
+
+
+Get Friends
+---------
+
+* [Facebook /{user-id}/friends](https://developers.facebook.com/docs/graph-api/reference/user/friends/)
+* [jQuery $.getJSON](https://api.jquery.com/jQuery.getJSON/)
+
+[[get-friends]]
+
+---
+
+
+
+Tom Chen TODO
+---------
+
+Ends here
+
+---
+
+
 ### Facebook Social Plugin
 
 只要使用者有登入 Facebook 就能有   讚按鈕、分享按鈕。
