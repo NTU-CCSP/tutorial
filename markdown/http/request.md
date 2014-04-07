@@ -14,8 +14,10 @@ Request Headers
 
 ---
 
-HTTP Verbs
+HTTP Verbs/ Method
 ----------
+
+你想對在這個URL的東西做什麼？
 
 ### GET
 
@@ -35,6 +37,8 @@ login=alice@example.com&password=1235813
 ```
 
 其他還有 `PUT`、`DELETE` 等動詞。
+
+<!--  -->
 
 ---
 
