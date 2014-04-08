@@ -56,7 +56,7 @@ Post example
 
 - `application/x-www-form-urlencoded`: 預設值，空白會被轉換為`+`，特殊字元會被轉換為 ASCII 十六進位表示。
 - `multipart/form-data`: 配合 `<input type="file">` 可以上傳檔案。
-- text/plain: HTML5 新增，純文字表示。
+- `text/plain`: HTML5 新增，純文字表示。
 
 ---
 
