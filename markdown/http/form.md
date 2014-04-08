@@ -31,14 +31,20 @@ Basic sytax like this
 ---
 
 Get example
+---
+
+[[form-get-example]]
 
 ---
 
 Post example
+---
+
+[[form-post-example]]
 
 ---
 
-![](images/http/get_post.png)
+![compare with get and post](images/http/get_post.png)
 
 ---
 
@@ -46,11 +52,15 @@ Post example
 
 當使用 `post` 方法傳輸時，可以傳輸不只是單純文字的資料
 
+[[form-post-example]]
+
 - `application/x-www-form-urlencoded`: 預設值，空白會被轉換為`+`，特殊字元會被轉換為 ASCII 十六進位表示。
 - `multipart/form-data`: 配合 `<input type="file">` 可以上傳檔案。
-- text/plain: HTML5 新增，空白會被轉換為`+`，但特殊字元不會被轉換為 ASCII 十六進位表示。
+- text/plain: HTML5 新增，純文字表示。
 
 ---
 
-multipart example
+Multipart example
+---
 
+[[form-file-example]]
