@@ -74,7 +74,9 @@ Get Album Photos
 
 ---
 
+![AJAX flow](images/http/ajax_marked.png)
 
+---
 
 Put Everything Together
 ---------
