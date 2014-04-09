@@ -30,10 +30,12 @@ Divide into Subtasks
 ---------
 
 <ul>
-  <li class="fragment">拿到一個人的所有朋友（必須包含性別資訊）</li>
+  <li class="fragment">(ajax) 拿到一個人的所有朋友（必須包含性別資訊）</li>
   <li class="fragment">過濾我們想要的性別</li>
-  <li class="fragment">拿每個朋友的相簿列表，找出Profile Pictures</li>
-  <li class="fragment">針對每個人的Profile Pictures，找出最高讚數的相片</li>
+  <li class="fragment">(ajax) 拿每個朋友的相簿列表</li>
+  <li class="fragment">找出Profile Pictures</li>
+  <li class="fragment">(ajax) 針對每個人的Profile Pictures</li>
+  <li class="fragment">找出最高讚數的相片</li>
 </ul>
 
 ---
@@ -43,8 +45,8 @@ Divide into Subtasks
 Get Friends
 ---------
 
-* [Facebook /{user-id}/friends](https://developers.facebook.com/docs/graph-api/reference/user/friends/)
 * [jQuery $.getJSON](https://api.jquery.com/jQuery.getJSON/)
+* [Facebook /{user-id}/friends](https://developers.facebook.com/docs/graph-api/reference/user/friends/)
 
 [[get-friends]]
 
@@ -52,154 +54,75 @@ Get Friends
 
 
 
-Tom Chen TODO
+Get Friends Albums
 ---------
 
-Ends here
+* [Facebook /{user-id}/albums](https://developers.facebook.com/docs/graph-api/reference/user/albums/)
+
+[[get-friends-albums]]
 
 ---
 
 
-### Facebook Social Plugin
 
-只要使用者有登入 Facebook 就能有   讚按鈕、分享按鈕。
-
-- - -
-
-### Facebook Graph API 與 FQL
-
-Facebook Object（文章、使用者、照片......等）的 API。
-
-- - -
-
-### Facebook 登入
-
-使用者允許此應用程式後，可以得到使用者的 Access token，之後可用 Graph API 以使用者的身份做事情。
-
----
-
-Facebook App
-------------
-
-Facebook 使用者把權限交付給某 Facebook App，此 App 以使用者的身分做事情。
-
-![Facebook App attribution](images/http/app-attribution.png)
-
----
-
-Social Plugin : Like Button
+Get Album Photos
 ---------
 
-最簡單、最常見的整合方式：讚按鈕。
+* [Facebook /{user-id}/albums](https://developers.facebook.com/docs/graph-api/reference/user/albums/)
 
-[Like Button](https://developers.facebook.com/docs/reference/plugins/like/)
-
-可設定要按讚的網址（URL to Like）、寬度與一些外觀。
-
-<div class="row">
-  <div class="span3 centered">
-    ![Facebook Get Code](images/http/facebook-iframe.png)
-  </div>
-</div>
-
-可透過 `iframe` 或 HTML5 + Facebook JS SDK 引入，或直接用一個連結來做。
+[[get-album-photos]]
 
 ---
 
-Graph API / FQL
----------------
 
-[Graph API Reference](https://developers.facebook.com/docs/reference/api/)
 
-能讀取或發佈各種資源；每項資源裡有 fields（欄位）和 edges（巢狀資源）。
+Put Everything Together
+---------
 
-- - -
+* [Array::forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+* [Array::filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+* [Array::sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
-[FQL](https://developers.facebook.com/docs/reference/fql/)
-
-將 Graph API 裡的「物件」當成資料庫的「資料表」來操作，可以拿到比較多資源、下比較複雜的指令。
+[[get-friends-famous-photo]]
 
 ---
 
-用 ajax 存取 Graph API
-------------
 
-[[mrorz-ajax-demo2]]
 
----
+Get Friends
+---------
 
-Graph API Explorer
--------------------
+* [kriskowal/q](https://github.com/kriskowal/q)
+* [Q(value)](https://github.com/kriskowal/q/wiki/API-Reference#qvalue)
+* [jQuery to Q](https://github.com/kriskowal/q/wiki/Coming-from-jQuery#converting-jquery-promises-to-q)
 
-[Graph API Explorer](https://developers.facebook.com/tools/explorer)
-
-- - -
-
-試試 `454607821247176` 可以拿得到什麼資源與欄位。
-
-- - -
-
-Page 物件有[很多 edge](https://developers.facebook.com/docs/graph-api/reference/page#edges)。
-
-`454607821247176/posts` -- 塗鴉牆文章
-
-`454607821247176/feed` -- 「Recent Posts by Others」
+[[with-q-get-friends]]
 
 ---
 
-用 Facebook 帳號登入
-----------
 
-使用有名的複雜登入標準 Ouath2。
 
-登入過程會導到 facebook.com 登入與授權。
+Get Friends Albums
+---------
 
-![登入畫面](images/http/login.png) ![進階授權畫面](images/http/extended.png)
-
-- - -
-
-登入後，Facebook 把 Access token 傳給我們的網站
+[[with-q-get-friend-albums]]
 
 ---
 
-Token
------
 
-![令牌](images/http/token.jpg)
 
-### 令牌
+Get Album Photos
+---------
 
-> 令牌是我國古代軍事所用的一種物品......通常由軍隊的最高長官發出，交給下屬軍官，用於在執行任務時，證明已經或了最高長官的指令或授權......類似於今天的介紹信、授權證明書或執法證件。
-<a href="http://baike.baidu.com/view/544102.htm">-- 百度百科</a>
-
-<div class="fragment">
-  <hr>
-
-  已獲授權的證明。
-</div>
+[[with-q-get-album-photos]]
 
 ---
 
-Access Token
-------------
 
-![進階授權畫面](images/http/extended.png)
 
-裡頭有 App、目前的 Facebook 使用者是誰、允許的權限項目、登入時間等資訊（所以會 expire）。
+Put Everything Together
+---------
 
-[Login Permissions Reference](https://developers.facebook.com/docs/reference/login/#permissions)
+* [Q.all](https://github.com/kriskowal/q/wiki/API-Reference#promiseall)
 
-Graph API 裡的 field 與 connection 都有[相對應的權限](https://developers.facebook.com/docs/graph-api/reference/page)。
-
----
-
-Javascript SDK
--------------
-
-[Javascript SDK Reference](https://developers.facebook.com/docs/javascript/reference)
-
-`FB.init(...)` 放在特殊 function `fbAsyncInit` 中進行設定
-
-`FB.login(...)` 處理登入與授權。
-
-`FB.api(...)` 幫我們用 ajax 呼叫 Graph API。
+[[with-q-get-friends-famous-photo]]
