@@ -47,6 +47,7 @@ Get Friends
 
 * [jQuery $.getJSON](https://api.jquery.com/jQuery.getJSON/)
 * [Facebook /{user-id}/friends](https://developers.facebook.com/docs/graph-api/reference/user/friends/)
+* [Array::forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 
 [[get-friends]]
 
@@ -58,6 +59,7 @@ Get Friends Albums
 ---------
 
 * [Facebook /{user-id}/albums](https://developers.facebook.com/docs/graph-api/reference/user/albums/)
+* [Array::filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
 [[get-friends-albums]]
 
@@ -69,6 +71,7 @@ Get Album Photos
 ---------
 
 * [Facebook /{user-id}/albums](https://developers.facebook.com/docs/graph-api/reference/user/albums/)
+* [Array::sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
 [[get-album-photos]]
 
@@ -80,10 +83,6 @@ Get Album Photos
 
 Put Everything Together
 ---------
-
-* [Array::forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-* [Array::filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-* [Array::sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
 [[get-friends-famous-photo]]
 
