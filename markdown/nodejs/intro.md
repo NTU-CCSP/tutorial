@@ -3,6 +3,7 @@ Node.js
 
 * intro
 * http
+* fs
 * express
 
 ---
@@ -63,7 +64,8 @@ Install
 Initialize
 ---
 
-`npm init`
+[npm init](https://www.npmjs.org/doc/cli/npm-init.html)
 ![init prompt](/images/nodejs/init-prompt.png)
 [Commit](https://github.com/NTU-CCSP/node-tutorial/commit/eab60abd009d14a47a86f5f279a65cf474df1085)
----
+
+

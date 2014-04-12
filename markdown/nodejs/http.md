@@ -22,7 +22,7 @@ http.createServer(function (req, res) {
 HTTP Request
 ---
 
-還記得[上禮拜](http://ccsp.ntumobile.org/tutorial/http.html#/0/3)也有講到
+In [last week](http://ccsp.ntumobile.org/tutorial/http.html#/0/3)...
 
 [Commit](https://github.com/NTU-CCSP/node-tutorial/commit/a8ec890e3f9bbc7c0d1c1698703d50a92ffdeca5)
 ```JavaScript
@@ -45,7 +45,8 @@ http.createServer(function (req, res) {
 HTTP Response
 ---
 
-[上禮拜](http://ccsp.ntumobile.org/tutorial/http.html#/0/4)也有講到
+* [Last week](http://ccsp.ntumobile.org/tutorial/http.html#/0/4)
+* You have to send valid HTML response.
 
 [Commit](https://github.com/NTU-CCSP/node-tutorial/commit/c58eac4870d1f745f0fb3613dbca6fade0121284)
 ```JavaScript
@@ -67,13 +68,14 @@ res.end(body);
 ```
 
 * [http.ServerResponse](http://nodejs.org/api/http.html#http_class_http_serverresponse)
+* [respond.setHeader](http://nodejs.org/api/http.html#http_response_setheader_name_value)
 * [respond.end](http://nodejs.org/api/http.html#http_response_end_data_encoding)
 
 ---
 
 
 
-Everything is Asynchronous
+Callback is Asynchronous
 ---
 
 [Commit](https://github.com/NTU-CCSP/node-tutorial/commit/64d1ce1a32ece63762bfb017290dfaa55c46472f)
@@ -93,5 +95,4 @@ console.log('http.createServer and .listen called');
 * [Callback](http://ccsp.ntumobile.org/tutorial/http.html#/3/5)
 * [server.listen](http://nodejs.org/api/http.html#http_server_listen_port_hostname_backlog_callback)
 
----
 
