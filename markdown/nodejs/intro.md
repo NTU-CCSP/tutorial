@@ -48,9 +48,14 @@ APIs
 Install
 ---
 
-* Official [Installer](http://nodejs.org/download/)
-* By [homebrew](http://brew.sh/) :
-  `brew install node`
+<ul>
+  <li>
+    Official [Installer](http://nodejs.org/download/): just click next
+    ![installers](images/nodejs/installers.png)
+    [installed!](images/nodejs/installed.png)
+  </li>
+  <li class="fragment">By [homebrew](http://brew.sh/) : `brew install node`</li>
+</ul>
 
 <div class="fragment">
 **Try with `node -v` and `npm -v`**

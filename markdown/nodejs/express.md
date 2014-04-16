@@ -4,7 +4,6 @@ Comes to rescue
 * routing problem
 * static files serving
 * dynamic view rendering
-* **middleware** !?
 
 ---
 
@@ -46,10 +45,22 @@ Usage
 
 API docs => [express.js@3.x.x](http://expressjs.com/3x/api.html)
 
-* [app.use](http://expressjs.com/3x/api.html#app.use)
+* [app.use](http://expressjs.com/3x/api.html#app.use) (**middleware** !?)
 * [express.bodyParser](http://expressjs.com/3x/api.html#bodyParser)
 * [res.sendfile](http://expressjs.com/3x/api.html#res.sendfile)
-* [app.get](http://expressjs.com/3x/api.html#app.get)
+* [app.VERB](http://expressjs.com/3x/api.html#app.VERB)
+
+---
+
+
+
+The MVC Pattern
+---
+
+<ul>
+  <li>[Model–view–controller](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) (MVC) is a software pattern for implementing user interfaces.</li>
+  <li class="fragment">![MVC on wikimedia](http://upload.wikimedia.org/wikipedia/commons/0/0c/MVC.gif)</li>
+</ul>
 
 ---
 
@@ -101,26 +112,20 @@ Extract Controller Codes
 
 ---
 
-The MVC Pattern
----
-
-<ul>
-  <li>[Model–view–controller](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) (MVC) is a software pattern for implementing user interfaces.</li>
-  <li class="fragment">So we have `views` and `controllers`, what about `models`?</li>
-</ul>
-
----
-
 
 
 Models
 ---
 
-* Use a Database such as `MySQL` or `MongoDB`
-* Use [File System](http://nodejs.org/api/fs.html#fs_file_system) to read/save data
-* [fs](http://nodejs.org/api/fs.html#fs_file_system) with relative files writes to [`process.cwd`](http://nodejs.org/api/process.html#process_process_cwd)
+So we have `views` and `controllers`, what about `models`?
 
-[Commit](https://github.com/NTU-CCSP/node-tutorial/commit/9e05534a4bc7125a938872e1b67a3294adc64b8e)
+<ul>
+  <li>Use a Database such as `MySQL` or `MongoDB`</li>
+  <li class="fragment">Use [File System](http://nodejs.org/api/fs.html#fs_file_system) to read/save data</li>
+  <li class="fragment">[Commit](https://github.com/NTU-CCSP/node-tutorial/commit/9e05534a4bc7125a938872e1b67a3294adc64b8e)</li>
+  <li class="fragment">[fs](http://nodejs.org/api/fs.html#fs_file_system) with relative files writes to [`process.cwd`](http://nodejs.org/api/process.html#process_process_cwd)</li>
+</ul>
+
 
 ---
 
@@ -132,6 +137,7 @@ Extract Model Codes
 * Model(data) is the core of applications
 * We may use it again and agian everywhere in applications
 * Extracting them to independent module is always a good idea
+* [__dirname](http://nodejs.org/docs/latest/api/globals.html#globals_dirname)
 
 [Commit](https://github.com/NTU-CCSP/node-tutorial/commit/a806d35fe8182edb9968fe6a632c76b91c13a8b4)
 
